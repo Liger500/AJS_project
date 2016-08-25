@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Test Lab</title>
+	<script src="http:\\ajax.googleapis.com\ajax\libs\angularjs\1.4.8\angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSS\main.css" >
+	
+	<!--Michael Mitchell-->
+	<!--SD2670-->
+	<!--25AUG16-->
+	<!--Final Project-->
+	<!--Prof. Asam Mahmood-->
+	
+</head>
+
+<body ng-app="">
+
+	<div>
+		<nav >
+			<ul>
+				<li><a href="..\home.html">Home</a></li>
+				<li><a href="game.html" class="game">Game</a></li>
+				<li><a href="pics.html" class="pics">Pics</a></li>
+				<li><a href="project.html" class="projects">Project</a></li>
+				<li><a href="contact.html" class="contact">Contact</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<div>
+		<p> Name : <input type="text" ng-model="name"></p>
+		<h1>Hello {{name}}</h1>
+		<p>Welcome to the test chamber!</p>
+		<p>This is where features are developed and tested</p>
+		<p>before implementation in the main "site"</p>
+	</div>
+	
+	<div>
+		<label for="cellEdit">Cell:</label>
+		<input id="cellEdit" type="text" ng-model="cellValue" /><br />
+		<span class="valueItems"><strong>Value:</strong> {{cellValue}}</span><br />
+
+		<label for="emailEdit">E-mail:</label>
+		<input id="emailEdit" type="email" ng-model="emailValue" /><br />
+		<span class="valueItems"><strong>Value:</strong> {{emailValue}}</span><br />
+
+		<label for="urlEdit">URL:</label>
+		<input id="urlEdit" type="url" ng-model="urlValue" /><br />
+		<span class="valueItems"><strong>Value:</strong> {{urlValue}}</span><br />
+
+		<label for="passwordEdit">Password:</label>
+		<input id="passwordEdit" type="password" ng-model="passwordValue" /><br />
+		<span class="valueItems"><strong>Value:</strong> {{passwordValue}}</span><br />
+
+		<label for="textareaEdit">Text area:</label>
+		<textarea id="textareaEdit" ng-model="textareaValue"></textarea><br />
+		<span class="valueItems"><strong>Value:</strong> {{textareaValue}}</span>
+	</div>
+	
+	<br /><br /><br /><br />
+	
+	<h3>AJAX form submission with ng-submit</h3>
+	<form name="personForm2" ng-submit="submitData(person2, 'ajaxSubmitResult1')" novalidate>
+		<label for="firstNameEdit2">First name:</label>
+		<input id="firstNameEdit2" type="text" name="firstName" ng-model="person2.firstName" required /><br />
+		<label for="lastNameEdit2">Last name:</label>
+		<input id="lastNameEdit2" type="text" name="lastName" ng-model="person2.lastName" required /><br />
+		<br />
+		<button type="submit" ng-disabled="personForm2.$invalid">Submit</button>
+	</form>
+	<br />
+	<strong><label for="submitDebugText1">Submit result:</label></strong><br />
+	<textarea id="submitDebugText1">{{ajaxSubmitResult1 | json}}</textarea><br />
+	<br />
+
+</body>
+
+<footer>
+	<div class="center logos">
+		<a href="http://www.github.com/liger500"><img class="icon" src="IMG\github-128.png" /></a>
+		<a href="http://www.twitch.tv/liger500"><img class="icon" src="IMG\twitch-128.png" /></a>
+		<a href="http://www.facebook.com/liger500"><img class="icon" src="IMG\facebook-128.png" /></a>
+		<a href="https://www.linkedin.com/in/michael-mitchell-88024855"><img class="icon" src="IMG\linkedin-128.png" /></a>
+		<a href="http://www.twitter.com/liger500"><img class="icon" src="IMG\twitter-128.png" /></a>
+		<a href="http://www.youtube.com"><img class="icon" src="IMG\youtube2-128.png" /></a>
+		<a href="https://plus.google.com/u/0/103989352580048154390"><img class="icon" src="IMG\googleplus-128.png" /></a>
+		<a href="ee.html"><img class="icon" src="IMG\Ll.png"></a>
+	</div>
+</footer>
+
+</html>

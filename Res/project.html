@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>List</title>
+
+	<script src="http:\\ajax.googleapis.com\ajax\libs\angularjs\1.4.8\angular.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="CSS\main.css" >
+	<script src="JS\controllers.js"></script>
+	<script src="JS\services.js"></script>
+	<script src="JS\app.js"></script>
+	
+	<!--Michael Mitchell-->
+	<!--SD2670-->
+	<!--25AUG16-->
+	<!--Final Project-->
+	<!--Prof. Asam Mahmood-->
+	
+</head>
+
+<body ng-app="accountFeederApp" ng-controller="accountController">
+
+	<div>
+		<nav >
+			<ul>
+				<li><a href="..\home.html">Home</a></li>
+				<li><a href="game.html" class="game">Game</a></li>
+				<li><a href="pics.html" class="pics">Pics</a></li>
+				<li><a href="project.html" class="projects">Project</a></li>
+				<li><a href="contact.html" class="contact">Contact</a></li>
+			</ul>
+		</nav>
+	</div>
+	
+	<!-- <input type="text" ng-model="accountFilter" placeholder="Search..." /> -->
+	
+	<div id="accounts">
+		<table>
+			<thead>
+				<tr><th colspan="5">My Accounts and Games</th></tr>
+				<tr>
+					<td>Rank</td>
+					<td>Country</td>
+					<td>Service</td>
+					<td>Username</td>
+					<td># of Games</td>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<tr ng-repeat="account in accountsList">
+					<td>{{$index + 1}}</td>
+					<td><img ng-src="Img\flags\32\{{account.nationality}}.png" /></td>
+					<td><a ng-href="http://www.{{account.Account.accountName}}.com">{{account.Account.accountName}}</a></td>
+					<td><a ng-href="{{account.url}}">{{account.Constructors[0].name}}</a></td>
+					<td>{{account.games}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+</body>
+
+<footer>
+	<div class="center logos">
+		<a href="http://www.github.com/liger500"><img class="icon" src="IMG\github-128.png" /></a>
+		<a href="http://www.twitch.tv/liger500"><img class="icon" src="IMG\twitch-128.png" /></a>
+		<a href="http://www.facebook.com/liger500"><img class="icon" src="IMG\facebook-128.png" /></a>
+		<a href="https://www.linkedin.com/in/michael-mitchell-88024855"><img class="icon" src="IMG\linkedin-128.png" /></a>
+		<a href="http://www.twitter.com/liger500"><img class="icon" src="IMG\twitter-128.png" /></a>
+		<a href="http://www.youtube.com"><img class="icon" src="IMG\youtube2-128.png" /></a>
+		<a href="https://plus.google.com/u/0/103989352580048154390"><img class="icon" src="IMG\googleplus-128.png" /></a>
+		<a href="Res\ee.html"><img class="icon" src="IMG\Ll.png"></a>
+	</div>
+</footer>
+
+</html>
